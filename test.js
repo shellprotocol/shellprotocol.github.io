@@ -1,1 +1,1 @@
-alert(docunment.domain);
+alert(document.domain);
