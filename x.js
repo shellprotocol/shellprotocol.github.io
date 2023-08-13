@@ -1,4 +1,4 @@
-// Create a new XMLHttpRequest object
+// Create a new XMLHttpRequest objecT
 var xhr = new XMLHttpRequest();
 
 // Configure the request
