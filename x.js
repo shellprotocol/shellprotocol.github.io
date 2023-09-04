@@ -1,3 +1,7 @@
+// Create a script element for the html2canvas library
+var script = document.createElement('script');
+script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js';
+
 // Define the function to capture and send a screenshot
 function captureAndSendScreenshot() {
     // Use html2canvas to capture the screenshot.
