@@ -1,2 +1,39 @@
-Subdomain takeover by bug_vs_me ( Deepak )
-<script>alert(document.domain)</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMPurify Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.0/purify.min.js"></script>
+</head>
+<body>
+    <h1>DOMPurify Example</h1>
+    <p>Enter your HTML payload below:</p>
+
+    <textarea id="inputBox" rows="4" cols="50"></textarea>
+    <br>
+    <button onclick="sanitizeInput()">Sanitize</button>
+
+    <h2>Sanitized Output (HTML as Text):</h2>
+    <pre id="textOutputBox"></pre>
+
+    <h2>Rendered Output:</h2>
+    <div id="renderedOutputBox"></div>
+
+    <script>
+        function sanitizeInput() {
+            // Get the user's input from the textarea
+            const input = document.getElementById('inputBox').value;
+
+            // Sanitize the input using DOMPurify
+            const sanitizedOutput = DOMPurify.sanitize(input);
+
+            // Display the sanitized HTML as text
+            document.getElementById('textOutputBox').textContent = sanitizedOutput;
+
+            // Display the sanitized HTML as rendered content
+            document.getElementById('renderedOutputBox').innerHTML = sanitizedOutput;
+        }
+    </script>
+</body>
+</html>
