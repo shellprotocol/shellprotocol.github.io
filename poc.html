@@ -1,0 +1,18 @@
+<link rel=prefetch href="https://vote.makerdao.com/polling/create" as=document>
+<script>
+window.setTimeout(function() {
+  window.x = window.open("https://vote.makerdao.com/polling/create");
+  window.setTimeout(function() {
+    closeWindow();
+  }, 3000);
+}, 5000);
+
+function closeWindow() {
+  x.close();
+  document.write(`<link rel=prefetch href="https://vote.makerdao.com/polling/create" as=document>`)
+  window.setTimeout(function() {
+    window.open("https://vote.makerdao.com/polling/create")
+  }, 2000);
+}
+
+</script>
