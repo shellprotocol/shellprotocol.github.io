@@ -1,0 +1,121 @@
+{
+  "name": "maker-governance-portal",
+  "description": "The primary interface for dai governance.",
+  "version": "0.2.7",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@amaskd/sdsds": "^5.6.3",
+    "@makerdao/dai": "0.32.9",
+    "@makerdao/dai-plugin-config": "^0.2.14-rc.1",
+    "@makerdao/dai-plugin-governance": "^0.14.6",
+    "@makerdao/dai-plugin-ledger-web": "^0.9.10",
+    "@makerdao/dai-plugin-trezor-web": "0.9.7",
+    "@makerdao/test-helpers": "^0.2.1",
+    "@makerdao/ui-components-core": "0.3.5-rc.1",
+    "@makerdao/ui-components-footer": "^0.1.18",
+    "@makerdao/ui-components-onboarding": "0.1.5",
+    "@testing-library/react": "^9.4.0",
+    "bignumber.js": "^9.0.0",
+    "core-js": "3",
+    "ethers": "^4.0.43",
+    "gray-matter": "^4.0.2",
+    "history": "^4.9.0",
+    "ipfs-only-hash": "^1.0.2",
+    "jazzicon": "^1.5.0",
+    "lodash.round": "^4.0.4",
+    "lodash.uniq": "^4.5.0",
+    "lodash.uniqby": "^4.7.0",
+    "mixpanel-browser": "^2.29.0",
+    "moment": "^2.24.0",
+    "prop-types": "^15.6.2",
+    "ramda": "^0.26.0",
+    "raven-js": "^3.27.0",
+    "react": "^16.6.3",
+    "react-datetime-picker": "^2.4.0",
+    "react-dom": "^16.6.3",
+    "react-ga": "2.7.0",
+    "react-markdown": "^4.0.3",
+    "react-mde": "^8.0.1",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-thunk": "^2.3.0",
+    "showdown": "^1.9.0",
+    "styled-components": "^5.0.0"
+  },
+  "scripts": {
+    "start": "yarn dev",
+    "dev": "HTTPS=true NODE_ENV=development craco start",
+    "build": "CI=false craco build",
+    "now-build": "yarn build",
+    "deploy": "yarn build && now ./build -A ../now.json",
+    "testchain": "./scripts/run-testchain.sh",
+    "test": "yarn testchain --ci yarn jest",
+    "cover": "yarn testchain --ci yarn jest --coverage",
+    "eject": "react-scripts eject",
+    "precommit": "lint-staged",
+    "remove-sourcemaps": "rm -rf build/static/js/*.map"
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "prettier --write --single-quote",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@babel/helper-create-class-features-plugin": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.7",
+    "@babel/plugin-proposal-decorators": "^7.8.7",
+    "@babel/plugin-proposal-export-namespace-from": "^7.8.7",
+    "@babel/plugin-proposal-function-sent": "^7.8.7",
+    "@babel/plugin-proposal-numeric-separator": "^7.8.7",
+    "@babel/plugin-proposal-throw-expressions": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-flow": "^7.8.7",
+    "@babel/preset-react": "^7.8.7",
+    "@makerdao/testchain": "^1.1.23",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-plugin-styled-components": "^1.8.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "ganache-cli": "^6.2.3",
+    "husky": "^4.0.9",
+    "jest-each": "^24.9.0",
+    "jest-fetch-mock": "^3.0.1",
+    "jest-styled-components": "^7.0.0",
+    "lint-staged": "^9.5.0",
+    "madge": "^3.3.0",
+    "prettier": "^1.15.2",
+    "pretty": "^2.0.0",
+    "redux-mock-store": "^1.5.3",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text-summary"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(png|svg|md|css)$": "<rootDir>/test/helpers/fileMock.js"
+    },
+    "setupFiles": [
+      "<rootDir>/test/helpers/shimRequestAnimationFrame.js",
+      "<rootDir>/test/helpers/setup.js"
+    ]
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
