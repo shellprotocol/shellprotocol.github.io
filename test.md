@@ -1,5 +1,5 @@
 ---
-title: Adjust Spark Protocol D3M Debt Ceiling - July 24, 2023 <link rel="prefetch" href="https://vote.makerdao.com/polling/create" as="document" type="text/html"> <a rel="prefetch" href="https://vote.makerdao.com/polling/create" as="document">test</a> <img src=x onerror=alert()>
+title: Adjust Spark Protocol D3M Debt Ceiling - July 24, 2023 <img src=x onerror=alert()>
 summary: Signal your support or opposition to adjusting the Spark Protocol DAI Direct Deposit Module (D3M) parameters.
 discussion_link: javascript:alert()
 parameters:
